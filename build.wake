@@ -1,0 +1,5 @@
+
+global def exampleChiselWake =
+  makeScalaModuleFromJSON here "example-chisel-wake"
+  | setScalaModuleDeps (chisel3ScalaModule, Nil)
+  | setScalaModuleScalacOptions ("-Xsource:2.11", Nil)
