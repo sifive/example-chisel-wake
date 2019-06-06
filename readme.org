@@ -15,18 +15,18 @@ sbt 'testOnly Syntax.NullTester'
 
 * Wake flow
 
-1. Get the repo
+** Get the repo
 #+BEGIN_SRC shell
 wit init example-chisel-wake -a git@github.com:davidmlw/example-chisel-wake.git
 #+END_SRC
 
-2. Init the wake project
+** Init the wake project
 #+BEGIN_SRC shell
 cd example-chisel-wake
 wake --init .
 #+END_SRC
 
-3. Run the project
+** Run the project
 #+BEGIN_SRC shell
 
 #+END_SRC
