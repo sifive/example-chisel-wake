@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+#+TITLE:   Chisel Example by Wit and Wake
+#+AUTHOR:  Liwei.Ma@sifive.com
+
+#+STARTUP: hidestars
+#+STARTUP: indent
+
+
+* SBT flow
+
++ This is simple sbt project for Chisel3, which can be run as:
+#+BEGIN_SRC shell
+sbt 'testOnly Syntax.NullTester'
+#+END_SRC
+
+* Wake flow
+
+1. Get the repo
+#+BEGIN_SRC shell
+wit init example-chisel-wake -a git@github.com:davidmlw/example-chisel-wake.git
+#+END_SRC
+
+2. Init the wake project
+#+BEGIN_SRC shell
+cd example-chisel-wake
+wake --init .
+#+END_SRC
+
+3. Run the project
+#+BEGIN_SRC shell
+
+#+END_SRC
