@@ -1,7 +1,0 @@
-[
-    {
-        "commit": "d3dd4ab0709cea9ffb6126e39966e3dc6a39cc3d",
-        "name": "chisel3-wake",
-        "source": "git@github.com:sifive/chisel3-wake.git"
-    }
-]
