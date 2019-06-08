@@ -37,7 +37,7 @@ export PATH=</path/to/wit>:</path/to/java>:$PATH
 
 ** Get the repo
 #+BEGIN_SRC shell
-wit init example-chisel-wake -a git@github.com:davidmlw/example-chisel-wake.git
+wit init example-chisel-wake -a git@github.com:sifive/example-chisel-wake.git
 #+END_SRC
 
 ** Init the wake project
