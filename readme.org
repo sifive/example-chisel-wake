@@ -13,7 +13,27 @@
 sbt 'testOnly Syntax.NullTester'
 #+END_SRC
 
+So how can we just run this in Wake flow?
+
 * Wake flow
+** Install Wit
+#+BEGIN_SRC shell
+git clone git@github.com:sifive/wit.git </path/to/wit>
+#+END_SRC
+
+** Install Wake
+Currently use this link https://1288-148184315-gh.circle-artifacts.com/0/tmp/workspace/ubuntu_18_04/wake_0.15.0-1_amd64.deb
+#+BEGIN_SRC shell
+wget https://1288-148184315-gh.circle-artifacts.com/0/tmp/workspace/ubuntu_18_04/wake_0.15.0-1_amd64.deb
+sudo dpkg -i wake_0.15.0-1_amd64.deb
+#+END_SRC
+
+** Setup environment variables
+#+BEGIN_SRC shell
+export WAKE_PATH=</path/to/java>
+export PATH=</path/to/wit>:</path/to/java>:$PATH
+#+END_SRC
+
 
 ** Get the repo
 #+BEGIN_SRC shell
@@ -28,5 +48,12 @@ wake --init .
 
 ** Run the project
 #+BEGIN_SRC shell
+wake 'runTest "syntax.NullTester"'
+#+END_SRC
 
+** Try different error types
+uncomment lines in src/test/Syntax.scala and check different results.
+#+BEGIN_SRC scala
+//  assert(0)
+//  assert(false)
 #+END_SRC

@@ -1,14 +1,12 @@
 
 global def exampleChiselWake =
   makeScalaModuleFromJSON here "example-chisel-wake"
-  | setScalaModuleScalacOptions ("-Xsource:2.11", Nil)
 
 global def testExampleChiselWake =
   makeScalaModuleFromJSON here "test-example-chisel-wake"
   | setScalaModuleDeps (exampleChiselWake, Nil)
   | setScalaModuleSourceDirs ("src/test/scala", Nil)
   | setScalaModuleResourceDirs ("src/test/resources", Nil)
-  | setScalaModuleScalacOptions ("-Xsource:2.11", Nil)
 
 def reportScalaTest report job =
   def printReport paths =

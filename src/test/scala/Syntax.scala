@@ -23,6 +23,6 @@ class NullTester extends ChiselFlatSpec {
       c => new NullUnitTester(c)
     } should be (true)
   }
-  assert(0)
-  assert(false)
+//  assert(0)
+//  assert(false)
 }
