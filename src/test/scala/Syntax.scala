@@ -1,4 +1,4 @@
-package Syntax
+package syntax
 
 import chisel3._
 import chisel3.util._
@@ -23,4 +23,6 @@ class NullTester extends ChiselFlatSpec {
       c => new NullUnitTester(c)
     } should be (true)
   }
+  assert(0)
+  assert(false)
 }
