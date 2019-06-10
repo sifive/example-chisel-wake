@@ -6,17 +6,15 @@ import chisel3.iotesters.{ChiselFlatSpec, Driver, PeekPokeTester}
 
 class NullUnitTester(mm: Null) extends PeekPokeTester(mm) {
 
-  poke(mm.a, 2)
-  poke(mm.b, 1)
+  poke(mm.io.a, 2)
+  poke(mm.io.b, 1)
   step(1)
-  printf(p"result: ${mm.c}\n")
-  expect(mm.c, 3)
+  expect(mm.io.c, 3)
 
-  poke(mm.a, 2)
-  poke(mm.b, 2)
+  poke(mm.io.a, 2)
+  poke(mm.io.b, 2)
   step(1)
-  printf(p"result: ${mm.c}\n")
-  expect(mm.c, 0)
+  expect(mm.io.c, 0)
 }
 
 class NullTester extends ChiselFlatSpec {

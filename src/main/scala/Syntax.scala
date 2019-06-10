@@ -2,14 +2,18 @@ package syntax
 
 import chisel3._
 import chisel3.util._
-import chisel3.experimental.MultiIOModule
 
-class Null extends MultiIOModule {
-  val a = IO(Input(UInt(16.W)))
-  val b = IO(Input(UInt(16.W)))
-  val c = IO(Output(UInt(16.W)))
+class Null extends Module {
+  val io = IO ( new Bundle {
+    val a = Input(UInt(16.W))
+    val b = Input(UInt(16.W))
+    val c = Output(UInt(16.W))
+  })
+
   val d = Wire(UInt(16.W))
-  d := a + b
-  val e = a - b
-  c := d * e
+  d := io.a + io.b
+  val e = io.a - io.b
+  val cc = RegNext(d * e)
+  io.c := cc
+  printf(p"io.c = ${io.c}\n")
 }
