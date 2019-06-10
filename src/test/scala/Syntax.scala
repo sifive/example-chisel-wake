@@ -9,11 +9,13 @@ class NullUnitTester(mm: Null) extends PeekPokeTester(mm) {
   poke(mm.a, 2)
   poke(mm.b, 1)
   step(1)
+  printf(p"result: ${mm.c}\n")
   expect(mm.c, 3)
 
   poke(mm.a, 2)
   poke(mm.b, 2)
   step(1)
+  printf(p"result: ${mm.c}\n")
   expect(mm.c, 0)
 }
 
