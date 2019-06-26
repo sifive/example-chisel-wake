@@ -18,6 +18,15 @@ class NullUnitTester(mm: Null) extends PeekPokeTester(mm) {
 }
 
 class NullTester extends ChiselFlatSpec {
+  println ("hello world")
+
+  println(System.getProperty("java.version"))
+  println(System.getProperty("java.runtime.version"))
+
+  import scala.collection.JavaConversions._
+  val properties = System.getProperties()
+  for ((k,v) <- properties) println(s"key: $k, value: $v")
+
   "Basic test using Driver.execute" should "be used as an alternative way to run specification" in {
     iotesters.Driver.execute(Array(), () => new Null) {
       c => new NullUnitTester(c)
