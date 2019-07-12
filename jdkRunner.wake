@@ -23,8 +23,10 @@ def makeJdkRunner name scoreMultiplier jdkHomeDir runner =
   makeRunner name score pre post runner
 
 publish runner =
-  makeJdkRunner "/opt/jdk8-local"   2.0 "/opt/jdk1.8.0_201" localRunner,
-  makeJdkRunner "/opt/jdk8-default" 2.0 "/opt/jdk1.8.0_201" defaultRunner,
+  makeJdkRunner "/opt/jdk8-local"   2.0 "/opt/jdk1.8.0_212" localRunner,
+  makeJdkRunner "/opt/jdk8-default" 2.0 "/opt/jdk1.8.0_212" defaultRunner,
+  makeJdkRunner "/opt/jdk11-local"   3.0 "/opt/jdk-11.0.3" localRunner,
+  makeJdkRunner "/opt/jdk11-default" 3.0 "/opt/jdk-11.0.3" defaultRunner,
   Nil
 
 
@@ -52,7 +54,7 @@ publish runner =
 ##publish path = "/opt/jdk/bin", Nil
 
 global def runJavaVersion =
-  def cmdline = which("java"), "-version", Nil
+  def cmdline = "java", "-version", Nil
   makePlan cmdline Nil
   | setPlanKeep False
   | setPlanResources ("jdk/1.8.0", Nil)
