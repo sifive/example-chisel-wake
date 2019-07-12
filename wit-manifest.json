@@ -8,5 +8,10 @@
         "commit": "258e0bd41ddc8811725d51192a8fffb133b6f1c8",
         "name": "chisel3-wake",
         "source": "git@github.com:sifive/chisel3-wake.git"
+    },
+    {
+        "commit": "80096ef8d76fc410b1073e7678661d8cbb6e2be9",
+        "name": "chisel-iotesters-wake",
+        "source": "git@github.com:sifive/chisel-iotesters-wake.git"
     }
 ]
