@@ -23,10 +23,14 @@ def makeJdkRunner name scoreMultiplier jdkHomeDir runner =
   makeRunner name score pre post runner
 
 publish runner =
+  makeJdkRunner "/opt/jdk8-local"   2.0 "/opt/jdk1.8.0_201" localRunner,
+  makeJdkRunner "/opt/jdk8-default" 2.0 "/opt/jdk1.8.0_201" defaultRunner,
   makeJdkRunner "/opt/jdk8-local"   2.0 "/opt/jdk1.8.0_212" localRunner,
   makeJdkRunner "/opt/jdk8-default" 2.0 "/opt/jdk1.8.0_212" defaultRunner,
   makeJdkRunner "/opt/jdk11-local"   3.0 "/opt/jdk-11.0.3" localRunner,
   makeJdkRunner "/opt/jdk11-default" 3.0 "/opt/jdk-11.0.3" defaultRunner,
+  makeJdkRunner "/opt/jdk11-local"   2.0 "/opt/jdk-12.0.1" localRunner,
+  makeJdkRunner "/opt/jdk11-default" 2.0 "/opt/jdk-12.0.1" defaultRunner,
   Nil
 
 
