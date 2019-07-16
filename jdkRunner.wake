@@ -59,3 +59,6 @@ global def runJavaVersion =
   | setPlanKeep False
   | setPlanResources ("jdk/1.8.0", Nil)
   | runJob
+
+
+publish path="/opt/protobuf-3.5.0/bin", Nil
