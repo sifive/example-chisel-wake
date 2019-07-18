@@ -2,13 +2,13 @@
 	"example-chisel-wake": {
 		"scalaVersion": "2.12.8",
 		"dependencies": [
-			"edu.berkeley.cs::chisel3:3.1.7"
+			"edu.berkeley.cs::chisel3:3.1.8"
 		]
 	},
 	"test-example-chisel-wake": {
 		"scalaVersion": "2.12.8",
 		"dependencies": [
-			"edu.berkeley.cs::chisel-iotesters:1.2.9"
+			"edu.berkeley.cs::chisel-iotesters:1.2.10"
 		]
 	}
 }
