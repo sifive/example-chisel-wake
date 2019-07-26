@@ -1,7 +1,7 @@
 [
     {
-        "commit": "48faa6a394bee4e8361f677c1a7df183b0b25d04",
-        "name": "scala-wake",
-        "source": "git@github.com:sifive/scala-wake.git"
+        "commit": "258e0bd41ddc8811725d51192a8fffb133b6f1c8",
+        "name": "api-chisel3-sifive",
+        "source": "git@github.com:sifive/api-chisel3-sifive.git"
     }
 ]
